@@ -12,8 +12,6 @@ import (
 )
 
 var (
-	mountpath = "/Volumes/Android"
-	
 	port = flag.Int("p", adb.AdbPort, "")
 )
 
@@ -32,6 +30,5 @@ func main() {
   <-sig
   log.Print("shutting down")
 	ah.Stop()
-	fh.Unmount(mountpath)
 }
 
